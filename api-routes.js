@@ -40,6 +40,7 @@ router
 router
   .route('/inventory/:id')
   // TODO: Write a GET route that returns a single item from the inventory
+  // Note:  can use [inventory[0]] instead of [[inventory]]
   .get( async (req, res) => {
     try {
       const [[inventory]] = await db.query (`
